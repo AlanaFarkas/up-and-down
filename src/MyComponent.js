@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class MyComponent extends Component {
 
 	render () {
-		return (
-			<div>MyComponent is here too!</div>
 
+		const { name, test } = this.props
+
+		return (
+			<div>Hi {name}, I've imported a Component {test}</div>
 		)
 	}
 }

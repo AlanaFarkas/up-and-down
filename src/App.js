@@ -14,7 +14,7 @@ class App extends Component {
 
     this.up = this.up.bind(this);
     this.down = this.down.bind(this);
-    this.alana = this.alana.bind(this);
+    this.message = this.message.bind(this);
   }
 
   up() {
@@ -29,8 +29,8 @@ class App extends Component {
     })
   }
 
-  alana() {
-    console.log("You're gonna be ok girl");
+  message() {
+    console.log("You got this");
   }
 
   render() {
@@ -38,8 +38,8 @@ class App extends Component {
       <div className="App">
         <button onClick={this.up}>Add</button>
         <button onClick={this.down}>Subtract</button>
-        <button onClick={this.alana}>Boost Spirits</button>
-        <MyComponent />
+        <button onClick={this.message}>Secret Message</button>
+        <MyComponent name="Alana" test="hello"/>
       </div>
     );
   }
