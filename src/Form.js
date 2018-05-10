@@ -10,7 +10,8 @@ class InfoForm extends Component {
 			<form>
 				<input type='text' name="name" placeholder="Enter your name" />
 				<input type='text' name="age" placeholder="Enter your age" /> 
-				<input type='text' name="residence" placeholder="Enter your borough" /> 			 
+				<input type='text' name="residence" placeholder="Enter your borough" />
+				<input type='submit' value='submit' /> 	
 			</form>
 		);
 	}
