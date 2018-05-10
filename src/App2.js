@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InfoForm from './Form';
+import MyComponent from './MyComponent';
 import logo from './logo.svg';
 import './App.css';
 
@@ -55,7 +55,7 @@ class App extends Component {
         <button onClick={this.up}>Add</button>
         <button onClick={this.down}>Subtract</button>
         <button onClick={this.message}>Secret Message</button>
-        <InfoForm />
+        <MyComponent myInfo={myInfo} />
       </div>
     );
   }
