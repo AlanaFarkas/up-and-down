@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
+import App from './App';
+
 import styled from 'styled-components';
 
 class InfoForm extends Component {
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			clicked: false,
+		}
+
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+
 	handleClick(e) {
 		e.preventDefault();
-		console.log('clicked it');
+		console.log('clicked it!');	
+		this.setState({clicked: this.state.clicked=true})
+
 	}
 
 	render () {
-		const { myInfo } = this.props
+
+	const { myInfo } = this.props;
 
 		return (
 			<form>
