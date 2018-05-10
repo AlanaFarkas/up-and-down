@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import App from './App';
-
 import styled from 'styled-components';
 
 class InfoForm extends Component {
@@ -14,12 +13,17 @@ class InfoForm extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
+	message() {
+		console.log('You got this');
+	}
+
 
 	handleClick(e) {
 		e.preventDefault();
-		console.log('clicked it!');	
-		this.setState({clicked: this.state.clicked=true})
-
+		this.setState({
+			clicked: this.state.clicked = true,
+		});
+			console.log('clicked');
 	}
 
 	render () {
