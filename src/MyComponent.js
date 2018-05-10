@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class MyComponent extends Component {
 
@@ -6,9 +7,13 @@ class MyComponent extends Component {
 		const { myInfo } = this.props
 		
 		return (
-			<div>Hi {myInfo.name}, you are {myInfo.age} years old and you live in {myInfo.residence} </div>
+			<InfoDiv>Hi {myInfo.name}, you are {myInfo.age} years old and you live in {myInfo.residence} </InfoDiv>
 		)
 	}
 }
+
+const InfoDiv = styled.div`
+	border: 1px red solid;
+`;
 
 export { MyComponent as default, MyComponent };
