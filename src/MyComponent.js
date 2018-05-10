@@ -4,10 +4,10 @@ class MyComponent extends Component {
 
 	render () {
 
-		const { name, test } = this.props
+		const { name, test, myObject } = this.props
 
 		return (
-			<div>Hi {name}, I've imported a Component {test}</div>
+			<div>Hi {name}, I've imported a Component {test} and {myObject.key}</div>
 		)
 	}
 }

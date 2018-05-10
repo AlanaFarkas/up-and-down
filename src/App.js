@@ -3,6 +3,10 @@ import MyComponent from './MyComponent';
 import logo from './logo.svg';
 import './App.css';
 
+const myObject = {
+  key: 'Alana',
+}
+
 class App extends Component {
 
     constructor(props) {
@@ -39,7 +43,7 @@ class App extends Component {
         <button onClick={this.up}>Add</button>
         <button onClick={this.down}>Subtract</button>
         <button onClick={this.message}>Secret Message</button>
-        <MyComponent name="Alana" test="hello"/>
+        <MyComponent name="Alana" test="hello" myObject={myObject} />
       </div>
     );
   }
