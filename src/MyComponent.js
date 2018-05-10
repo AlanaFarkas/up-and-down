@@ -12,4 +12,4 @@ class MyComponent extends Component {
 	}
 }
 
-export default MyComponent;
+export { MyComponent as default, MyComponent };
