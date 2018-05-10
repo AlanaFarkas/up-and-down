@@ -3,9 +3,11 @@ import MyComponent from './MyComponent';
 import logo from './logo.svg';
 import './App.css';
 
-const myObject = {
-  key: 'Alana',
-}
+const myInfo = {
+  name: 'Alana Farkas',
+  age: 29,
+  residence: 'Brooklyn'
+};
 
 class App extends Component {
 
@@ -16,10 +18,13 @@ class App extends Component {
       count: this.props.start || 0
     }
 
+ 
+
     this.up = this.up.bind(this);
     this.down = this.down.bind(this);
     this.message = this.message.bind(this);
-  }
+  };
+
 
   up() {
     this.setState({
@@ -30,7 +35,7 @@ class App extends Component {
   down() {
     this.setState({
       count: this.state.count - 1
-    })
+    });
   }
 
   message() {
@@ -38,12 +43,19 @@ class App extends Component {
   }
 
   render() {
+    
+    const testProp = {
+      testkey: 'farkas',
+    };
+
+    const test = "hello";
+
     return (
       <div className="App">
         <button onClick={this.up}>Add</button>
         <button onClick={this.down}>Subtract</button>
         <button onClick={this.message}>Secret Message</button>
-        <MyComponent name="Alana" test="hello" myObject={myObject} />
+        <MyComponent myInfo={myInfo} />
       </div>
     );
   }

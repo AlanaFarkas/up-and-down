@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 class MyComponent extends Component {
 
 	render () {
-
-		const { name, test, myObject } = this.props
-
+		const { myInfo } = this.props
+		
 		return (
-			<div>Hi {name}, I've imported a Component {test} and {myObject.key}</div>
+			<div>Hi {myInfo.name}, you are {myInfo.age} years old and you live in {myInfo.residence} </div>
 		)
 	}
 }
