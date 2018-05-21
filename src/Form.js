@@ -21,7 +21,8 @@ class InfoForm extends Component {
 	handleClick(e) {
 		e.preventDefault();
 		this.setState({
-			clicked: this.state.clicked = true,
+			// clicked: this.state.clicked = true,
+			clicked: this.state.clicked ? false : true		
 		});
 			console.log('clicked');
 	}
