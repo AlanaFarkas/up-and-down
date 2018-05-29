@@ -1,3 +1,15 @@
+Recreate reddit with api, stories and topics that appeal most to me to show my personality. 
+article and vote state
+
+Components: 
+buttons = answer buttons, 'hit me' button
+cards = question card
+scorecard
+
+
+
+************************************************************************************************************************************************
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
