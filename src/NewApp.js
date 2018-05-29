@@ -6,29 +6,42 @@ class NewApp extends Component {
     constructor(props) {
     super(props);    
     // define the internal state of the component
-    // this.state = {
-    //   count: this.props.start || 0
-    // } 
+      // count: this.props.start || 0
+    this.state = {
+      newGame: false,
+      questionObject: [],
+      gameOver: true,
+      // score: 0/{questionObject.length()}
+    } 
 
-    this.up = this.up.bind(this);
-    this.message = this.message.bind(this);
+    // this.up = this.up.bind(this);
+    // this.message = this.message.bind(this);
+    // this.callApi = this.callApi.bind(this);
+
   };
 
-  callApi(url){
 
+
+  componentWillMount() {
+      fetch('https://www.reddit.com/r/nyc.json')
+      .then(results => {
+        let alana = results.json();
+        console.log(alana);
+      }).then();
   }
 
 
-  up() {
-    this.setState({
-      count: this.state.count + 1
-    });
-  }
+
+  // up() {
+  //   this.setState({
+  //     count: this.state.count + 1
+  //   });
+  // }
 
 
-  message() {
-    console.log("You got this");
-  }
+  // message() {
+  //   console.log("You got this");
+  // }
 
   render() {
 
