@@ -1,3 +1,4 @@
+
 Recreate reddit with api, stories and topics that appeal most to me to show my personality. 
 article and vote state
 
@@ -14,10 +15,9 @@ state:gameStart = true when user hits 'start new game' button;
 api is called when browser loads, question obje
 when questionArray.length = 0, state:gameOver = true;
 
-
-
-
 ************************************************************************************************************************************************
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
