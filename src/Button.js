@@ -5,7 +5,6 @@ class Button extends Component {
 
 	constructor(props) {
 		super(props);
-
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -26,4 +25,4 @@ class Button extends Component {
 };
 
 
-export default Button;
+export { Button as default, Button };
