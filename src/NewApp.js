@@ -27,7 +27,10 @@ class NewApp extends Component {
       .then(results => {
         let alana = results.json();
         console.log(alana);
-      }).then();
+      }).then(data => {
+        let jordan = data;
+        console.log(jordan);
+      });
   }
 
 
