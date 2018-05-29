@@ -19,7 +19,7 @@ class Button extends Component {
 	// const { myInfo } = this.props;
 
 		return (
-			<button onClick={this.handleClick}>Ask Me</button> 	
+			<button onClick={this.handleClick}>{this.props.text}</button> 	
 
 		);
 	}

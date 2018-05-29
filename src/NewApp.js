@@ -6,13 +6,17 @@ class NewApp extends Component {
     constructor(props) {
     super(props);    
     // define the internal state of the component
-    this.state = {
-      count: this.props.start || 0
-    } 
+    // this.state = {
+    //   count: this.props.start || 0
+    // } 
 
     this.up = this.up.bind(this);
     this.message = this.message.bind(this);
   };
+
+  callApi(url){
+
+  }
 
 
   up() {
@@ -30,7 +34,8 @@ class NewApp extends Component {
 
     return (
       <div className="App">
-      <Button onClick={this.answer} />
+        <Button text="+" />
+        <Button text="-" />
       </div>
     );
   }
@@ -39,3 +44,4 @@ class NewApp extends Component {
 
 export { NewApp as default, NewApp };
 
+      // <Button onClick={this.message} />
