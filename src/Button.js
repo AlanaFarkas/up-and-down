@@ -11,6 +11,7 @@ class Button extends Component {
 
 	handleClick(e) {
 		e.preventDefault();
+		console.log("got it");
 	}
 
 	render () {
