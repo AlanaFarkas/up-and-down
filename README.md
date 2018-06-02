@@ -1,19 +1,12 @@
 
-Recreate reddit with api, stories and topics that appeal most to me to show my personality. 
-article and vote state
+Recreate reddit index page with api, stories and topics that appeal most to me to show my personality. 
+article and vote state.
 
-Components: 
-buttons = answer buttons, 'hit me' button
-cards = question card
-score display (numbers) = scorecard 
+Components that comprise news item: 
+Buttons - up/down voting 
+Number display - vote count
+h1 - Article title
 
-a user can 'start a new game';
-a user can hit the 'ask me' question to serve up a new question and possible answers;
-a user's score is displayed at all times;
-
-state:gameStart = true when user hits 'start new game' button;
-api is called when browser loads, question obje
-when questionArray.length = 0, state:gameOver = true;
 
 ************************************************************************************************************************************************
 
