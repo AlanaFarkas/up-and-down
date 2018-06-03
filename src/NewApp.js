@@ -28,7 +28,13 @@ class NewApp extends Component {
       .then(results => {
         return results.json();
       }).then(data => {
-        console.log(data);
+        // console.log(data['data']['children']);
+        let articles = data['data']['children'];
+        // console.log(articles);
+        articles.map((article) => 
+          console.log(article['data']['title'])
+        );
+        
         return data;
       });
   }
