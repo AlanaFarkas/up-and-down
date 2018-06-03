@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from './Button';
 
+
+
 class NewApp extends Component {
 
     constructor(props) {
@@ -8,13 +10,12 @@ class NewApp extends Component {
     // define the internal state of the component
       // count: this.props.start || 0
     this.state = {
-      newGame: false,
-      questionObject: [],
-      gameOver: true,
+      tally: 0
       // score: 0/{questionObject.length()}
     } 
 
-    // this.up = this.up.bind(this);
+    this.upVote = this.upVote.bind(this);
+    this.downVote = this.downVote.bind(this);
     // this.message = this.message.bind(this);
     // this.callApi = this.callApi.bind(this);
 
@@ -25,26 +26,27 @@ class NewApp extends Component {
   componentWillMount() {
       fetch('https://www.reddit.com/r/nyc.json')
       .then(results => {
-        let alana = results.json();
-        console.log(alana);
+        return results.json();
       }).then(data => {
-        let jordan = data;
-        console.log(jordan);
+        console.log(data);
+        return data;
       });
   }
 
 
 
-  // up() {
-  //   this.setState({
-  //     count: this.state.count + 1
-  //   });
-  // }
+  upVote() {
+    this.setState({
+      tally: this.state.tally + 1
+    });
+  }
 
+  downVote() {
+    this.setState({
+      tally: this.state.tally - 1
+    });
+  }
 
-  // message() {
-  //   console.log("You got this");
-  // }
 
   render() {
 
