@@ -10,7 +10,8 @@ class NewApp extends Component {
     // define the internal state of the component
       // count: this.props.start || 0
     this.state = {
-      tally: 0
+      tally: 0,
+      title: '',
       // score: 0/{questionObject.length()}
     } 
 
@@ -22,20 +23,21 @@ class NewApp extends Component {
   };
 
 
-
   componentWillMount() {
       fetch('https://www.reddit.com/r/nyc.json')
       .then(results => {
         return results.json();
       }).then(data => {
-        // console.log(data['data']['children']);
         let articles = data['data']['children'];
-        // console.log(articles);
-        articles.map((article) => 
-          console.log(article['data']['title'])
+        const titles = articles.map((article) => 
+          console.log(article['data']['title']),
+          // <li key={article['data']['title']}>{article['data']['title']}</li>
         );
         
-        return data;
+        // return data;
+        // return (
+        //   <ul>{titles}</ul>
+        // )
       });
   }
 
